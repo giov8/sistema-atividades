@@ -1,0 +1,77 @@
+body{
+   background-image: linear-gradient(135deg, #7038BA, #8FC9F7);  /* Comentário */
+   background-attachment: fixed;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: Helvetica, sans-serif;
+}
+
+.pag-inicial {
+    background-color: #e4f5f9;
+    padding: 80px;
+}
+
+div.pag-inicial {
+    border-radius: 50px; /* Arrendondar a borda da caixa */
+}
+
+.pag-inicial img {
+    width: 250px;
+}
+
+.botoes a {
+    text-decoration: none; /*Remover o sublinhado dos botões*/
+    background-color: #a684d2; /*alterando a cor do fundo*/
+    font-size: 20px; /*Alterando o tamanho da fonte*/
+    color: #530068; /*mudar a cor do texto*/
+    padding: 10px; /*adicionar um espaço em volta texto*/
+    border-radius: 10px;
+}
+
+/* novo estilo*/
+.botoes button {
+    text-decoration: none; /*Remover o sublinhado dos botões*/
+    background-color: #a684d2; /*alterando a cor do fundo*/
+    font-size: 20px; /*Alterando o tamanho da fonte*/
+    color: #530068; /*mudar a cor do texto*/
+    padding: 10px; /*adicionar um espaço em volta texto*/
+    border-radius: 10px;
+    border: none; /* LINHA NOVA*/
+}
+
+.botoes {
+    display: flex; /*Transforma a exibição em flexível*/
+    flex-direction: column; /*Deixa os botões acima um do outro*/
+    gap: 20px; /*adiciona espaço entre os botões*/
+    text-align: center;
+}
+
+.caixa-de-login {
+    /*muda o fundo*/
+    background-color: #e4f5f9;
+    /* Adiciona espaço dentro */
+    padding: 30px;
+    /* Borda arredondada */
+    border-radius: 20px;
+    /* Espaço em cima (por fora) */
+    margin-top: 100px;
+}
+
+.cadastro .caixa-de-login {
+    margin-top: 50px;
+}
+
+/* Estilizando a entrada de texto*/
+.caixa-de-login input {
+    width: 200px; /*mudei a largura */
+    height: 30px; /*mudei a altura*/
+    font-size: 1.1rem; /*mudei tamanho da fonte*/ 
+
+    border-radius: 10px; /*arredondei a borda*/
+    border: solid; /*adicionei borda solida*/
+    border-width: 1px; /*mudei a grossura da borda*/
+
+    padding-left: 10px; /*adicionei espaço antes do texto*/
+    padding-right: 10px;
+}
