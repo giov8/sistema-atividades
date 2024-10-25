@@ -35,7 +35,7 @@ Neste repositório está implementado o sistema "...", que é ..., que serve par
 2. Digite o comando `pip install flask --user` e pressione enter
 
 ### Configurando GIT
-1. No terminal digite os comandos:
+1. No terminal digite os comandos: 
 
 `git config user.name seu_usuario`
 
