@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de Divs</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="search-bar" placeholder="Digite para filtrar..." onkeyup="filterDivs()">
+    
+    <div class="filter-item">Div 1 - Apple</div>
+    <div class="filter-item">Div 2 - Banana</div>
+    <div class="filter-item">Div 3 - Orange</div>
+    <div class="filter-item">Div 4 - Grape</div>
+
+    <script>
+        function filterDivs() {
+            const searchValue = document.getElementById('search-bar').value.toLowerCase();
+            const divs = document.querySelectorAll('.filter-item');
+
+            divs.forEach(div => {
+                if (div.textContent.toLowerCase().includes(searchValue)) {
+                    div.classList.remove('hidden');
+                } else {
+                    div.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
