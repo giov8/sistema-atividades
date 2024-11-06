@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for, redirect, flash
 app = Flask(__name__)
+app.secret_key = "chave_muito_segura"
 
 # Cria uma lista e usuários e senha, depois vamos pegar no DB
 usuarios = {
@@ -10,12 +11,17 @@ usuarios = {
 }
 
 @app.route('/') #rota para a página inicial
-def home():
+def index():
     return render_template('index.html')
 
 @app.route('/login') #rota para a página de login
 def login():
     return render_template('login.html')
+
+@app.route('/home')
+def home():
+    return render_template('home.html')
+
 
 # VERFIFICAR O LOGIN
 @app.route('/verificar-login', methods=['POST'])
@@ -27,13 +33,11 @@ def verificar_login():
     # Verifica se o usuario digitado está na lista e se 
     # a senha está certa
     if username in usuarios and usuarios[username] == password:
-        return f"Bem-vindo, {username}!"
+        return redirect(url_for('home'))
     else:
-        return "Usuário ou senha inválidos."
-
-
-
-
+        # Flash envia mensagem para o front-end
+        flash('Usuário ou senha incorretos', 'danger')
+        return redirect(url_for('login'))
 
 
 # parte principal do
