@@ -39,6 +39,9 @@ def verificar_login():
         flash('Usuário ou senha incorretos', 'danger')
         return redirect(url_for('login'))
 
+@app.route('/cadastro') #rota para a página de login
+def cadastro():
+    return render_template('cadastro.html')
 
 # parte principal do
 if __name__ == '__main__':
